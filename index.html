@@ -1,0 +1,100 @@
+<html>
+
+<head>
+	<title>Parcel Sandbox</title>
+	<meta charset="UTF-8" />
+	<style>
+		.style3 img {
+			width: 350px;
+			height: 350px;
+		}
+
+		.slide-show.active {
+			position: absolute;
+		}
+
+		.slide-show.inactive {
+			display: none;
+		}
+
+		#circle_container {
+			display: flex;
+			justify-content: center;
+			height: 72px;
+			background-color: #FFF;
+			align-items: center;
+		}
+
+		.test {
+			display: flex;
+			justify-content: center;
+		}
+
+		@keyframes left {
+			0% {
+				left: -100%;
+			}
+			100% {
+				left: 0%;
+			}
+		}
+
+		@keyframes right {
+			0% {
+				left: 100%;
+			}
+			100% {
+				left: 0%;
+			}
+		}
+
+		.wrapper {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+
+		.slide-left {
+			animation: left 0.5s normal forwards ease-in-out;
+		}
+
+		.slide-right {
+			animation: right 0.5s normal forwards ease-in-out;
+		}
+
+		.p_circle {
+			width: 10px;
+			height: 10px;
+			background-color: #FFF;
+			margin: 0 10px;
+			border-radius: 50%;
+			border: 1px solid #000;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="circle_container"></div>
+
+	<div class="slideshow-container"></div>
+
+	<div class="test">
+		<div class="wrapper style3 slide-show active" id="0">
+			<!-- <img src="https://octodex.github.com/images/megacat-2.png" /> -->
+			<img src="https://via.placeholder.com/300.png/09f/fff" />
+		</div>
+		<div class="wrapper style3 slide-show inactive" id="1">
+			<!-- <img src="https://octodex.github.com/images/dodgetocat_v2.png" /> -->
+			<img src="https://via.placeholder.com/150" />
+		</div>
+		<div class="wrapper style3 slide-show inactive" id="2">
+			<!-- <img src="https://octodex.github.com/images/mcefeeline.jpg" /> -->
+			<img src="https://via.placeholder.com/300.png/09f/fff" />
+		</div>
+	</div>
+
+	<script src="src/index.js"></script>
+</body>
+
+</html>
